@@ -1,5 +1,4 @@
-'use strict';var defined = window.$ebayIcons = window.$ebayIcons || {};
-var rootSvg = void 0;
+'use strict';var rootSvg = void 0;
 
 module.exports = require('marko-widgets').defineWidget({
     init: function init() {
@@ -18,9 +17,6 @@ module.exports = require('marko-widgets').defineWidget({
             defs.parentNode.removeChild(defs);
 
             if (symbol) {
-                // Here we get the name of the symbol by removing the `icon-` part.
-                // We then mark this symbol as `defined` so that no other `ebay-icons` render it.
-                defined['rendered_ebay_icon_' + symbol.id.slice(5)] = true;
                 rootSvg.appendChild(symbol);
             }
         }
